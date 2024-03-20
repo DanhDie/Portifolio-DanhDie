@@ -1,0 +1,316 @@
+html {
+  scroll-behavior: smooth;
+}
+@keyframes slideLeftIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50vw);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideRightIn {
+  0% {
+    opacity: 0;
+    transform: translateX(50vw);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideUpIn {
+  0% {
+    opacity: 1;
+    transform: translateY(-50vh);
+    rotate: 0;
+  }
+  65%,
+  95% {
+    rotate: 0deg;
+  }
+  70% {
+    rotate: 5deg;
+  }
+  80% {
+    rotate: -5deg;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    rotate: 0;
+  }
+}
+body {
+  font-family: "Red Hat Display", sans-serif;
+  background-image: url(/src/assets/fundo-galaxia.jpg);
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+.tela {
+  background-color: rgb(155, 153, 153);
+  display: grid;
+  grid-template-columns: 2fr 7fr;
+  grid-template-rows: 100%;
+  grid-template-areas: "nav corpo";
+}
+.red-hat display-<uniquifier > {
+  font-family: "Red Hat Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+h1 {
+  font-weight: 900;
+  text-shadow: 0 0 40px rgb(70, 16, 114), 0 0 5px pink;
+}
+h2 {
+  font-weight: 600;
+}
+.navegacao h1 {
+  animation: slideLeftIn 1s;
+  animation-delay: 0.1s;
+}
+.navegacao h2 {
+  color: hsla(0, 0%, 55%, 0.6);
+  font-size: 1.2rem;
+  margin-top: -13px;
+  animation: slideLeftIn 1s;
+  animation-delay: 0.2s;
+  text-shadow: 0 0 1px pink, 0 0 3px rgb(92, 6, 150);
+}
+h3 {
+  font-weight: 400;
+}
+
+.corpo {
+  grid-area: corpo;
+}
+.navegacao {
+  background-color: hsl(0, 0%, 5%);
+  background-image: linear-gradient(
+    to top left,
+    hsl(245, 100%, 3%),
+    black,
+    hsl(258, 87%, 3%),
+    black,
+    hsl(245, 100%, 3%)
+  );
+  color: hsl(0, 0%, 80%);
+  grid-area: nav;
+  padding: 1rem 2rem 2rem 2rem;
+  border-right: 1px solid hsl(0, 0%, 90%);
+  animation: slideLeftIn 1s;
+  animation-delay: 0s;
+}
+.navegacao .fixado {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+}
+.rodape {
+  font-size: 0.8rem;
+  color: hsl(0, 0%, 60%);
+  display: flex;
+  position: absolute;
+  top: 93vh;
+  left: -0.5rem;
+  animation: slideLeftIn 1s;
+  animation-delay: 0.4s;
+}
+ul {
+  margin-left: -2rem;
+  list-style: none;
+  animation: slideLeftIn 1s;
+  animation-delay: 0.3s;
+  text-shadow: 0 0 1px pink, 0 0 2px rgb(92, 6, 150);
+}
+
+.container-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 0 2rem;
+  margin-top: 15vh;
+}
+.cartao {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+}
+.contatos {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+li {
+  margin: 0.5rem 0;
+}
+
+a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: hsl(0, 0%, 55%);
+  transition: all 0.3s;
+}
+.navegacao a {
+  font-size: 1rem;
+}
+.navegacao a:hover {
+  font-size: 1.3rem;
+  padding-left: 0.3rem;
+  color: hsl(0, 0%, 75%);
+  text-shadow: 0 0 10px pink, 0 0 50px rgb(153, 0, 255);
+}
+.section-4 a:hover {
+  font-size: 1.4rem;
+  transform: translateY(-0.3rem);
+  color: hsl(0, 0%, 75%);
+  text-shadow: 0 0 10px pink, 0 0 50px rgb(153, 0, 255);
+}
+::-webkit-scrollbar {
+  background-color: rgb(0, 0, 0);
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: hsl(0, 0%, 80%);
+  border: 2px solid black;
+  border-radius: 1px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-image: linear-gradient(
+    to top,
+    hsl(0, 0%, 80%),
+    hsl(282, 55%, 94%),
+    rgb(191, 160, 214),
+    hsl(282, 55%, 94%),
+    hsl(0, 0%, 80%)
+  );
+  border: 2px solid black;
+  border-radius: 1px;
+}
+.section {
+  padding: 4rem 0 5rem 0;
+  height: 50vh;
+}
+.section-1 {
+  padding: 1rem 0 5rem 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section-2 {
+  animation: slideRightIn 1s;
+  animation-delay: 0s;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(0, 0%, 90%);
+  background-image: linear-gradient(
+    to top,
+    hsl(0, 0%, 70%),
+    hsl(0, 0%, 90%),
+    hsl(0, 0%, 70%)
+  );
+  justify-content: space-evenly;
+}
+.section-3 {
+  animation: slideRightIn 1s;
+  animation-delay: 0s;
+  height: 100vh;
+}
+.section-4 {
+  animation: slideRightIn 1s;
+  animation-delay: 0s;
+  margin: 1rem 0 2.4rem 0;
+  text-shadow: 0 0 1px pink, 0 0 2px rgb(92, 6, 150);
+}
+.bloco {
+  color: hsl(0, 0%, 80%);
+  background-color: hsla(283, 44%, 13%, 0.3);
+  box-shadow: 2px 2px 5px hsla(280, 55%, 4%, 0.7);
+  padding: 1.5rem;
+  margin: 1.5rem;
+}
+.icone {
+  color: hsl(0, 0%, 80%);
+  background-color: hsla(283, 44%, 13%, 0.3);
+  box-shadow: 2px 2px 5px hsla(280, 55%, 4%, 0.7);
+  padding: 1.5rem;
+  margin: 1.5rem;
+  margin-top: 20vh;
+  display: flex;
+  text-align: center;
+  width: 15rem;
+  animation: slideUpIn 1.5s;
+  animation-delay: 0.2s;
+}
+.icone .cartao {
+  border: 0;
+}
+.imagem {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+.bloco-texto {
+  background-color: hsl(0, 0%, 5%);
+  background-image: linear-gradient(
+    to top left,
+    hsl(244, 96%, 10%),
+    black,
+    hsl(276, 87%, 6%),
+    black,
+    hsl(244, 92%, 10%)
+  );
+  color: hsl(0, 0%, 80%);
+  box-shadow: 2px 2px 5px hsla(280, 55%, 4%, 0.7);
+  padding: 1.5rem;
+  margin: 1.5rem;
+  margin-right: 10rem;
+  text-align: left;
+}
+.invertido {
+  margin-left: 10rem;
+  margin-right: 1.5rem;
+  text-align: right;
+}
+.container-card .cartao {
+  padding: 1rem;
+  width: 20vw;
+  color: hsl(0, 0%, 80%);
+  background-color: hsla(283, 44%, 13%, 0.3);
+  box-shadow: 2px 2px 5px hsla(280, 55%, 4%, 0.7);
+  text-align: center;
+}
+.cartao-tudo {
+  margin: -1rem;
+  margin-bottom: 0;
+}
+.container-card .cartao h3 {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+.container-card .cartao a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: hsl(0, 0%, 55%);
+  text-shadow: 0 0 1px pink, 0 0 2px rgb(92, 6, 150);
+}
+.container-card .cartao a:hover {
+  font-size: 1.4rem;
+  transform: translateY(-0.3rem);
+  color: hsl(0, 0%, 75%);
+  text-shadow: 0 0 10px pink, 0 0 50px rgb(153, 0, 255);
+}
+.section-2 p {
+  font-size: 1.1rem;
+}
