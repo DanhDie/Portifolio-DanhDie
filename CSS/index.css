@@ -140,7 +140,6 @@ ul {
   margin-top: 15vh;
 }
 .cartao {
-  border: 2px solid black;
   display: flex;
   flex-direction: column;
   width: 270px;
