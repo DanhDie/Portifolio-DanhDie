@@ -45,7 +45,7 @@ html {
 }
 body {
   font-family: "Red Hat Display", sans-serif;
-  background-image: url(/src/assets/fundo-galaxia.jpg);
+  background-image: url(./src/assets/fundo-galaxia.jpg);
   background-repeat: repeat;
   background-attachment: fixed;
   background-size: cover;
